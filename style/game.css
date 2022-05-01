@@ -1,0 +1,142 @@
+@font-face {
+    font-family: title;
+    src: url("/font/Lora-Regular.ttf");
+}
+
+*{
+    font-family: title;
+}
+
+/* body {
+    height: 100%;
+    background: url(/images/bg.jpg) no-repeat;
+    background-size: cover;
+} */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct {
+    color: green;
+    border: 1px solid green;
+}
+
+.incorrect {
+    color: red;
+    border: 1px solid red;
+}
+
+.position {
+    color: white;
+    padding: 5px;
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    left: 15%;
+}
+
+.title h1 {
+    font-size: 55px;
+    color: #6dbfe2;
+    font-family: title;
+    text-align: center;
+    margin: 25px 0;
+}
+ 
+h1::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 150px;
+    background-color:#6dbfe2;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1::after {
+    position: absolute;
+    content: "\2764";
+    top:13%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 30px;
+    color: red;
+    background-color: #fff;
+    bottom: -20px;
+    font-size: 75%;
+}
+
+.question p{
+    font-size: 18px;
+    text-align: center;
+    margin-top: -13px ;
+}
+
+.img {
+    width: 55%;
+    margin: 0 auto;
+}
+
+div img{
+    width: 100%;
+}
+
+.answer {
+    position: relative;
+}
+
+.answer p {
+    text-align: center;
+    margin:2.5px ;
+    font-size: 18px;
+    color: darksalmon;
+    display: none;
+}
+
+.in_container {
+    justify-content: space-around;
+}
+
+#name {
+    width:150% ;
+    margin:5% ;
+    height: 30px; ;
+}
+
+#btn{
+    width:90px ;
+    height:35px ;
+    background-color: #6dbfe2;
+    border: 1px solid lightgray ;
+    color:white ;   
+    cursor: pointer;
+}
+
+.backpage{
+    font-size: 30px;
+
+}
+.backpage i{
+    margin: 10px ;
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+#btn:hover{
+    color:#6dbfe2 ;
+    background-color: transparent;
+    transition: all 0.2s ease;
+    font-weight: 600;
+
+}
+
+.backpage i:hover{
+    color:darkcyan ;
+    transition: all 0.5s ease;
+ }

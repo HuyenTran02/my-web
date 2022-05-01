@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../images/icon-web.png">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ciar4n/izmir@1.0.1/izmir.min.css">
+
+        <link rel="stylesheet" href="/style/menu.css">
+        <link rel="stylesheet" href="/style/footer.css">
+        <link rel="stylesheet" href="/style/goTop.css">
+        <link rel="stylesheet" href="/style/hotel.css">
+        
+        <script src="/data/hotel-data.js"></script>
+        <script src="/javascript/hotel.js"></script>
+        <script src="/javascript/gotoTop.js"></script>
+        <script src="/javascript/contact.js"></script>
+        
+        <title>Afforda</title>
+    </head>
+    <body>
+        <!-- Menu -->
+        <header>
+            <div class="main-menu">
+                <img src="../images/logo.png" alt="logo">
+                <div class="menu">
+                    <ul class="flex menu-items">
+                        <li>
+                            <a href="/website/home.html">Trang chủ</a>
+                        </li>
+                        <li class="gioithieu">
+                            <a href="/website/Introduce.html">Giới thiệu </a>
+                        </li>
+                        <li class="tourdulich">
+                            <a href="/website/tours.html">Tour du lịch</a>
+                        </li>
+                        <li class="hotel">
+                            <a href="/website/hotels.html">Khách sạn</a>
+                        </li>
+                        <li class="news">
+                            <a href="/website/news.html">Tin tức</a>
+                        </li>
+                        <li class="contact">
+                            <a href="#">Liên hệ</a>
+                        </li>
+                        <li>
+                            <div class="user">
+                                <a href="#"><i class="fas fa-user"></i></a>
+                                <div class="flex menu-user">
+                                    <div class="flex">
+                                        <a href="#">Đăng ký</a>
+                                    </div>
+                                    <div>
+                                        <span>/</span>
+                                    </div>
+                                    <div class="flex">
+                                        <a href="#">Đăng nhập</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex welcom">
+                <div class="flex welcom-text">
+                    <p>
+                        Chào mừng bạn đã đến với Afforda - Nơi cung cấp khu nghỉ dưỡng cao cấp, khách sạn sang trọng.
+                    </p>
+                </div>
+                
+                <div class="welcom-btn">
+                    <div class="out-line click">
+                        <div class="in-line">
+                            <p>ĐẶT KHÁCH SẠN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- go to Top -->
+        <div class="up">
+            <a href="#" id="goUp"><p  class="flex">^</p></a>
+        </div>
+
+        <!-- form tìm kiếm -->
+        <nav class="search-hotel">
+            <div class="flex search-title">
+                <h2>TÌM KIẾM</h2>
+            </div>
+            <div class="search">
+                <ul class="flex search-form">
+                    <li class="type" id="category">
+                        <span> Danh mục </span>
+                        <ul>
+                            <li>
+                                <span>Khu nghỉ dưỡng</span>
+                            </li>
+                            <li>
+                                <span>Khách sạn</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="type" id="area">
+                        <span> Vùng </span>
+                        <ul>
+                            <li>
+                                <span>Miền Bắc</span>
+                            </li>
+                            <li>
+                                <span>Miền Trung</span>
+                            </li>
+                            <li>
+                                <span>Miền Nam</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="type" id="price">
+                        <span>Giá</span>
+                        <ul>
+                            <li>
+                                <span>Giá: thấp đến cao</span>
+                            </li>
+                            <li>
+                                <span>Giá: cao đến thấp</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="look">
+                        <span>Tìm</span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Khu nghỉ dưỡng -->
+        <section class="resort">
+            <div>
+                <h2>KHU NGHỈ DƯỠNG</h2>
+            </div>
+            <div class="flex content">
+                <div class="flex resort-items"></div>
+            </div>
+        </section>
+
+        <!-- khach san -->
+        <section class="hotels">
+            <div>
+                <h2>KHÁCH SẠN</h2>
+            </div>
+            <div class="content">
+                <div class="flex h-items"></div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="flex footer-items">
+                <div class="flex col33">
+                    <div class="col1">
+                        <img src="../images/logo.png" alt="Logo">
+                        <div class="infomation">
+                            <i class="fas fa-map-signs">
+                            <span>  512 Nguyễn Thái Sơn - Gò Vấp - TP HCM </span>
+                            </i>
+                            <br>
+                            <i class="fas fa-phone-alt">
+                                <span> 0399411749</span>
+                            </i>
+                            <br>
+                            <i class="fas fa-envelope">
+                                <span> afforda@gmail.com</span>
+                            </i>
+                            <br>
+                            <i class="fas fa-clock">
+                                <span>Mon - Sat: 8h00 - 17h30</span>
+                            </i>
+                        </div>
+                        <br>
+                        <div class="social">
+                            <span>Social:</span>
+                            <a href="https://www.facebook.com/" target="blank" id="1"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/" target="blank" id="2"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/" target="blank" id="3"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.google.com.vn/" target="blank" id="4"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="https://www.youtube.com/" target="blank" id="5"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex col33">
+                    <div class="col2">
+                        <div>
+                            <h1>Khách Hàng</h1>
+                        </div>
+                        <div class="flex c-menu">
+                            <ul>
+                                <li><a href="#">Điều kiện & điều khoản</a></li>
+                                <li><a href="#">Quyền riêng tư</a></li>
+                                <li><a href="#">Chính sách bảo mật và thông tin</a></li>
+                                <li><a href="#">Ý kiến khách hàng</a></li>
+                                <li><a href="#">Phương thức thanh toán</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex col33">
+                    <div class="col3">
+                        <div class="flex col3-title">
+                            <h1>Đăng Ký</h1>
+                        </div>
+                        <div class="flex col3-items">
+                            <div class="col3-item">
+                                <div>
+                                    <div>
+                                        <span>Đăng kí để được nhận thông tin khuyến mãi một cách nhanh chóng!</span>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <div>
+                                            <input type="text" placeholder="Nhập email" />
+                                        </div>
+                                        <div class="flex btn">
+                                            <button>Đăng ký</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

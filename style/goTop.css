@@ -1,0 +1,42 @@
+@font-face {
+    font-family: goTop;
+    src: url(/font/Lora-Regular.ttf);
+  }
+  
+  .up {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    height: 45px;
+    width: 45px;
+  }
+  
+  .up a{
+    display: block;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 100%;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+  }
+  
+  .up a p {
+    height: 120%;
+    width: 100%;
+    font-size: 23.5px;
+    font-weight: 600;
+    font-family: goTop;
+    color: #333;
+  }
+  
+  .up a:hover {
+    border: 2px solid #31a7da;
+    background: #31a7da;
+    opacity: 1;
+  }
+  
+  .up a:hover p{
+    color: white;
+  }

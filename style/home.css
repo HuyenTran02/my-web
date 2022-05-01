@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap");
+:root {
+  --main-color: #6dbfe2;
+}
+
+html, body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.body {
+  font-size: 15px;
+  font-family: monospace;
+}
+
+section {
+  margin-top: 50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --------header --------*/
+
+header {
+    background: url(/images/nhaTrang.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+
+          /* -----menu----- */
+
+  .menu-items > li:first-child a{
+    position: relative;
+  }
+          
+  .menu-items > li:first-child a::after {
+    content: " ";
+    width: 70px;
+    border-width: 1%;
+    border-radius: 10px;
+    border-style: solid;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+  }
+
+/*----- Slogan-header ----- */
+
+.Slogan {
+  height: calc(100% - 87px);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.Slogan-text {
+  width: 70%;
+}
+
+.Slogan-text p {
+  font-family: Slogan;
+  width: 80%;
+  color: paleturquoise;
+  font-size: 75px;
+}
+
+.Slogan-btn {
+  width: 30%;
+  animation: btn 2s ease-in-out infinite alternate;
+}
+
+  .in-line {
+    background: skyblue;
+    padding: 15px 20px;
+    margin: 2.5%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .in-line a {
+    color: darkcyan;
+    font-weight: 500;
+    display: block;
+  }
+
+  .in-line::before {
+    content: "";
+    width: 120%;
+    height: 100%;
+    background: teal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewX(-35deg) translateX(-120%);
+    transition: transform 0.5s ease-out;
+  }
+
+  .out-line {
+    border: 1px solid silver;
+    width: 70%;
+  }
+
+  .out-line:hover .in-line::before {
+    transform: skewX(-35deg) translateX(-10%);
+  }
+
+  .out-line:hover a {
+    color: lightcyan;
+    position: relative;
+    z-index: 999;
+  }
+
+  @keyframes btn {
+    0%, 100% {
+      transform:translateY(10%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+  }
+
+/*----- Kham pha ----- */
+
+section.discovery {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+  }
+
+          /*----- form tim kiem ----- */
+
+  nav.log-in {
+    padding: 0 50px;
+    width: 40%;
+    height: 80%;
+  }
+
+                    /* -----phan dau----- */
+
+  .header-content {
+    width: 100%;
+    height: 17%;
+  }
+
+  .header-content > h1 {
+    color: var(--main-color);
+    font-size: 35px;
+  }              
+
+  .header-content > p {
+    color: #055c81;
+    font-size: 35px;
+    font-family: Slogan;
+  }
+
+                  /* -----phan giua----- */
+
+  .border {
+    border: 1px solid var(--main-color);
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    color: #055c81;
+  }
+
+  .border:hover {
+    color: #31a7da;
+    font-size: 16.5px;
+    width: 75%;
+  }
+
+  .log-in-form {
+    width: 100%;
+    border: 1px solid #3e97bd;
+    height: 70%;
+  }
+
+  .login-title h3{
+    color: var(--main-color);
+    padding: 20px;
+    font-size: 25px;
+    font-weight: normal;
+    height: 10%;
+  }
+
+  .login-with {
+    height: 20%;
+    
+  }
+
+  .login-with-gg img {
+    width: 10.5%;
+  }
+
+  .login-with-fb img {
+    width: 8%;
+    margin: 4px 5px;
+  }
+
+  .input-form {
+    padding: 20px 0;
+    width: 70%;
+    height: 70%;
+  }
+
+  .form p{
+    text-align: left;
+    padding: 5px 0;
+    color: #055c81;
+  }
+
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    padding-left: 7px;
+    border-radius: 7px;
+    border: 1px solid #3e97bd;
+  }
+
+  .input-pass a {
+    font-size: 12px;
+    color: #055c81;
+  }
+
+                  /* -----phan cuoi----- */
+
+  .btn {
+    width: 100%;
+    height: 13%;
+  }
+
+  .col50 {
+    width: 50%;
+  }
+
+  .c1 {
+    justify-content: flex-end;
+    margin-right: 3px;
+  }
+
+  .c2 {
+    justify-content: flex-start;
+    margin-left: 3px;
+  }
+
+  .btn button {
+    height: 35px;
+    width: 150px;
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+  }
+
+  .btn > .c1 > button.first {
+    background: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+  }
+
+  .btn > .c1 > button.first:hover {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .btn > .c2 > button:last-child:hover {
+    background-color: #31a7da;
+    border: 1px solid #31a7da;
+    font-size: 14.5px;
+    height: 40px;
+  }
+
+          /*----- hinh anh minh hoa ----- */
+
+  .discovery-image {
+    position: absolute;
+    width: 60%;
+    right: 0;
+  }
+
+  .img-items {
+    flex-wrap: wrap;
+  }
+
+  .img-items .img-item {
+    max-width: 31.5%;
+    max-height: 33.33%;
+    margin: 5px;
+    position: relative;
+  }
+
+  .img-item img{
+    max-width: 100%;
+    max-height: 130px;
+    transition: all 0.5s ;
+  }
+  
+  .img-item{
+    height:auto ;
+    margin: 2px;
+    overflow: hidden;
+    position:relative ;
+    
+  }
+  .img-item:hover img{
+    -webkit-transform:scale(1.2);
+    transform: scale(1.2);
+  }
+
+/*------địa điểm nổi bật-------*/
+.main_promotion {
+  display: block;
+  margin: 0 5% 0;
+}
+
+.promotion_title {
+  text-align: center;
+  font-size: 35px;
+  color: var(--main-color);
+  margin: 40px 0 70px;
+  position: relative;
+}
+.promotion_title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.promotion_title::after {
+  position: absolute;
+  content: "\2764";
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  color: red;
+  background-color: #fff;
+  bottom: -20px;
+}
+
+.promotion__item {
+  display:inline-flex ;
+  position: relative;
+  justify-content: space-between;
+  border-radius: 2px;
+  transition: transform 0.2s linear;
+  margin: 40px ;
+}
+
+.promotion__img {
+  position: relative;
+  transition: all 0.5s ;
+}
+.promotion__ninhbinh {
+  width:46%;
+  background-image: url(/images/ninh\ binh.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  
+}
+
+.promotion__condao {
+  width: 45%;
+  background-image: url(/images/ConĐao.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  
+}
+
+.promotion__sondoong{
+  width: 45%;
+  background-image: url(/images/Son-doong.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+ 
+}
+
+.promotion__item {
+
+  position: relative;
+  box-shadow: 10px 10px 10px #aaaa;
+  overflow: hidden;
+  position:relative ;
+}
+
+.promotion__item:hover .promotion__img{
+  -webkit-transform:scale(1.2);
+  transform: scale(1.2);
+}
+
+.promotion__item-body {
+  padding: 30px ;
+  margin-left: 10px;
+}
+
+.promotion__item-body a {
+ display: block;
+}
+
+.promotion__item-head-headding {
+  font-size: 30px;
+  color: #555;
+  font-weight: 600;
+}
+
+.promotion__item-head-location {
+  font-size: 25px;
+  color: #9a9a9a;
+  margin-top: 10px;
+}
+
+
+.promotion__item-decs-and-price {
+  border-top: 1px solid #f0ecec;
+  border-bottom: 1px solid #f0ecec;
+  margin: 5px ;
+  padding: 15px 0;
+  justify-content: space-between; 
+}
+
+.promotion__item-price {
+  color: #555;
+  font-size: 25px;
+  font-weight: 600;  
+  margin-top: 5px; 
+}
+
+.promotion__item-text {
+  font-size: 22px;
+  color: #9a9a9a;
+ 
+}
+
+
+/*CTA*/
+
+.container__banner {
+  background: url(/images/cta.jpg) center / cover no-repeat;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.grid {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.container__banner-wrap {
+  padding: 50px 0;
+  justify-content: center;
+  align-items: center ;
+}
+
+.container__banner-title {
+  margin: 20px 0;
+  color: white ;
+  font-family: Slogan;
+}
+
+.container__banner-title > h2 {
+  font-size: 500%;
+  font-weight: 500;
+  padding-left:8%;
+  font-family: Slogan;
+}
+
+.container__banner-title > h1 {
+  font-size: 500%;
+  font-weight: 500;
+  padding-left: 4%;
+  font-family: Slogan;
+ 
+}
+
+.container__banner-view {
+  text-align: center;
+}
+
+.container__banner-view > a {
+  text-decoration: none;
+  color: #31a7da;
+  font-size: 20px;
+  font-weight: 400;
+  display: inline-block;
+  background-color: #FFF; 
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+ 
+/*ưu đãi tốt nhất*/
+.rating_5 {
+  font-size: 20px;
+  margin-right: 4px;
+  margin-top: 7px;
+}
+
+.rating i:last-child {
+  margin-right: 0;
+}
+.rating_5 i:first-child {
+ color: #ffeb8d;
+}
+
+.rating_5 i:nth-child(2) {
+  color: #fed46b;
+}
+
+.rating_5 i:nth-child(3) {
+  color: #fbb53d;
+}
+
+.rating_5 i:nth-child(4) {
+  color: #fa9e1b;
+}
+
+.rating_5 i:nth-child(5) {
+  color: #ef910a;
+}
+
+.main_offers {
+  display: block;
+  margin: 0 8% 0;
+}
+
+.offers_title {
+  text-align: center;
+  font-size: 35px;
+  color: var(--main-color);
+  margin: 40px 0 70px;
+  position: relative;
+}
+.offers_title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background-color: var(--main-color);
+  /*border-radius: 10px;*/
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.offers_title::after {
+  position: absolute;
+  content: "\2764";
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  color: red;
+  background-color: #fff;
+  bottom: -20px;
+}
+
+.offers_items {
+  margin-top: 50px;
+  display: flex;
+}
+
+.offers_item {
+  position: relative;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.offers_item:hover .offers_content {
+  top: 0;
+  opacity: 1;
+} 
+
+div > img {
+  width: 170%;
+  height: 100%;
+}
+.offers_image {
+  height: 100%;
+}
+
+.offers_price {
+  display: inline-block;
+  font-size: 25px;
+  color: white;
+  margin-top: 8px;
+}
+
+.offers_content {
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: all .7s;
+  background-color: rgba(106, 213, 248, .5);
+  width: 100%;
+  height: 100%;
+  /*border-radius: 30px;*/
+}
+
+.offers_name {
+  /* position: absolute; */
+  left: 10;
+  bottom: 60px;
+  width: 150px;
+  height: 35px;
+  font-weight: 800;
+  background:  #31a7da;
+  overflow: hidden;
+   position: relative;
+}
+.offer_text {
+  text-shadow: 2px 2px 5px blue;
+  color: whitesmoke ;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 60px;
+}
+
+.offers_name a {
+  display: block;
+  font-size: 13px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 35px ;
+  padding-left: 22px;
+  
+}
+.offers_link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.offers_link a:hover{
+  color: dimgrey;
+  background:lightcyan;
+  transition: all 0.2s ease;
+}
+
+/*khách sạn*/
+.rating_5 {
+  font-size: 20px;
+  margin-right: 4px;
+  margin-top:7px ;
+}
+
+.rating i:last-child {
+  margin-right: 0;
+}
+.rating_5 i:first-child {
+ color: #ffeb8d;
+}
+
+.rating_5 i:nth-child(2) {
+  color: #fed46b;
+}
+
+.rating_5 i:nth-child(3) {
+  color: #fbb53d;
+}
+
+.rating_5 i:nth-child(4) {
+  color: #fa9e1b;
+}
+
+.rating_5 i:nth-child(5) {
+  color: #ef910a;
+}
+
+.main_hotel {
+  display: block;
+  margin: 0 8% 0;
+}
+
+.hotel_title {
+  text-align: center;
+  font-size: 35px;
+  color: var(--main-color);
+  margin: 40px 0 70px;
+  position: relative;
+}
+
+.hotel_title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background-color: var(--main-color);
+  /*border-radius: 10px;*/
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hotel_title::after {
+  position: absolute;
+  content: "\2764";
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  color: red;
+  background-color: #fff;
+  bottom: -20px;
+}
+.hotel_items {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  margin-top: 90px;
+}
+
+.hotel_item {
+  position: relative;
+  margin:20px ;
+  overflow: hidden;
+}
+.hotel_item:hover .hotel_content {
+  top: 0;
+  opacity: 1;
+} 
+
+.hotel_image {
+ height: 100%;
+ 
+}
+.hotel_image img {
+  width: 110%;
+  height: 100% ;
+}
+
+.hotel_content {
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: all .7s;
+  width: 100%;
+  height: 100%;
+  /*border-radius: 30px;*/
+  background-color: #6dbfe2;
+  
+ 
+}
+
+.hotel_price {
+  display: inline-block;
+  font-size: 25px;
+  color: white;
+  margin-top: 8px;
+}
+
+.hotel_location{
+  color:#fff ;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 60px;
+}
+
+.offers_link {
+  margin-top: 20px;
+  text-align: center;
+}
+.offers_link a {
+  font-size: 15px;
+  font-weight: 400;
+  display: inline-block;
+  background-color: #fff ;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: rgb(106, 213, 248);
+}
+  
+
+
+
+
+/* -----Đánh giá----- */
+
+.feedback {
+  margin: 0 5% 0;
+  height: 100%;
+}
+
+.fbk_title {
+  text-align: center;
+  font-size: 35px;
+  color: var(--main-color);
+  margin: 40px 0 50px;
+  position: relative;
+}
+
+.fbk_title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 150px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fbk_title::after {
+  position: absolute;
+  content: "\2764";
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 30px;
+  color: red;
+  background-color: #fff;
+  bottom: -20px;
+}
+
+.feedback h3 a {
+  color: #929191;
+  text-decoration: underline;
+}
+
+.feedback h3 {
+  margin: 0 0 25px 0;
+  color: #929191;
+  font-weight: 320;
+}
+
+.fbk-item {
+  height: 40%;
+  justify-content: space-evenly;
+  color: var(--main-color);
+  border: 0.5px solid #aaaa;
+  box-shadow: 10px 10px 10px #aaaa;
+  margin: 0px 10px;
+}
+
+.fbk-item-container {
+  margin: 25px;
+}
+
+.fbk-item-user {
+  width: 50%;
+}
+
+.fbk-item-user-img {
+  width: 25%;
+}
+
+.fbk-item-user-img img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.fbk-item-user-info {
+  width: 75%;
+}
+
+.fbk-item-user-info i {
+  color: #ef910a;
+}
+
+.fbk-item-user p:first-child {
+  font-weight: 550;
+  font-size: 20px;
+  width: 100%;
+}
+
+.fbk-item .fbk-item-rating {
+  width: 50%;
+  height: 100%;
+}
+
+.fbk-item-review p {
+  color: #929191;
+}
+
+.fbk-item-review img {
+  width: 50%;
+  padding: 10px 2.5px;
+}
